@@ -1,5 +1,5 @@
 #!/bin/sh
 
 sed -i '/clean-ipt/d' /etc/crontabs/root
-echo "0 3 * * * /etc/clean-ipt.sh" >> /etc/crontabs/root
+echo "0/5 * * * * /etc/clean-ipt.sh" >> /etc/crontabs/root
 crontab /etc/crontabs/root
